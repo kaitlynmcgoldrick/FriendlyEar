@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener(function() {
         // That fires when a page's URL contains a 'g' ...
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlContains: 'youtube.com' },
+            pageUrl: { urlContains: '' },
           })
         ],
         // And shows the extension's page action.
