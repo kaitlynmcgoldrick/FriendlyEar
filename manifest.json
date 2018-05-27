@@ -1,16 +1,16 @@
 {
-  "name": "NoComment",
-  "version": "1.0.0",
+  "name": "FriendlyEar",
+  "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Toggle comment visibility on YouTube.com",
+  "description": "When you're online, you don't have to be by yourself, FriendlyEar pays attention to your mental health.",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "page_action" :
-  {
-    "default_icon" : "images/icon-19-off.png",
-    "default_title" : "Toggle YouTube comments"
+
+  "browser_action": {
+    "default_icon": "images/icon-19-off.png",
+    "default_title": "Mental health monitorer and helper"
   },
   "permissions" : [
     "declarativeContent",
@@ -25,7 +25,8 @@
       }
   ],
   "icons" : {
-    "48" : "images/icon-48.png",
-    "128" : "images/icon-128.png"
-  }
+    "19" : "images/icon-19-on.png"
+    }
 }
+
+
