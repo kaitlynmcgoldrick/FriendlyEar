@@ -20,5 +20,14 @@ chrome.runtime.onInstalled.addListener(function() {
 
 
 chrome.pageAction.onClicked.addListener(function(tab) {
+  browser.pageAction.setIcon({
+    tabId: tab.id, path: "images/icon-19-on.png"
+  })
   chrome.tabs.executeScript(null, {file: "content.js"});
 });
+
+// browser.pageAction.onClicked.addListener((tab) => {
+//   browser.pageAction.setIcon({
+//     tabId: tab.id, path: "icons/icon-48.png"
+//   });
+// });

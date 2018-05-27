@@ -9,7 +9,7 @@
   },
   "page_action" :
   {
-    "default_icon" : "images/icon-19.png",
+    "default_icon" : "images/icon-19-off.png",
     "default_title" : "Toggle YouTube comments"
   },
   "permissions" : [

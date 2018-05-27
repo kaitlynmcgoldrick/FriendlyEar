@@ -19,15 +19,27 @@ function showHide() {
         console.log("done typing");
         let focused = document.activeElement
         // let myValue = document.querySelector('input').value;
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://192.34.78.218/api/inputUserData', true);
-        // xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        // xhr.onreadystatechange = handler;
-        xhr.send(JSON.stringify({
+
+        var data = JSON.stringify({
             "time": 3234234,
             "text": "fhdkfhsdkfj"
-        })); 
-        console.log(focused.value);
+          });
+          
+          var xhr = new XMLHttpRequest();
+        //   xhr.withCredentials = true;
+          
+          xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+              console.log(this.responseText);
+            }
+          });
+          
+          xhr.open("POST", "http://192.34.78.218/api/inputUserData");
+          xhr.setRequestHeader("Content-Type", "application/json");
+        //   xhr.setRequestHeader("Cache-Control", "no-cache");
+        //   xhr.setRequestHeader("Postman-Token", "b32a78ce-5b83-5703-da70-06e30913a7ac");
+          
+          xhr.send(data);
 
         // var request = makeHttpObject();
         // request.open('POST', 'https://192.34.78.218/api/inputUserData', false);
